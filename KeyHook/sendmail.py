@@ -42,10 +42,10 @@ def make_and_send_email(mail_content, subscriber, subject, img_data):
     # 邮件发送
     mail = smtplib.SMTP()
     mail.connect("smtp.163.com")  # 连接 qq 邮箱
-    mail.login("m13333449637@163.com", "DQKCQBDWVXEKQRHS")  # 账号和授权码
+    mail.login("xxxxxxxxxS@163.com", "xxxxxxxxxS")  # 账号和授权码
     try:
         mail.sendmail(
-            "m13333449637@163.com", subscriber, message.as_string()
+            "xxxxxxxxxS7@163.com", subscriber, message.as_string()
         )  # 发送账号、接收账号和邮件信息
         print("successfully send")
     except Exception as e:
@@ -53,4 +53,4 @@ def make_and_send_email(mail_content, subscriber, subject, img_data):
 
 
 if __name__ == "__main__":
-    make_and_send_email("this is a test", "550653451@qq.com", "作业", screenshotter_run())
+    make_and_send_email("this is a test", "xxxxxxxxxS@qq.com", "作业", screenshotter_run())
