@@ -132,4 +132,13 @@ else
     color_echo $YELLOW "[+] 本地 vuln 存在，跳过扫描"
 fi
 
+# UDP 扫描
+order4="nmap -sU --top-ports 20 ${ip} -oN ${outputdir}/udp > /dev/null"
+if [ ! -f "${outputdir}/udp" ]; then
+    dosomething "UDP 端口扫描" "$order4"
+    color_echo $GREEN "[*] UDP 端口扫描完成"
+else
+    color_echo $YELLOW "[+] 本地 udp 存在，跳过扫描"
+fi
+
 color_echo $GREEN "[*] 扫描完成"
